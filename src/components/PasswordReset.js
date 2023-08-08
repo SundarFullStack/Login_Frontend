@@ -22,7 +22,7 @@ const PasswordReset = () => {
         position: "top-center",
       });
     } else {
-      const res = await fetch("/sendpasswordlink", {
+      const res = await fetch("https://login-backend-6xsa.onrender.com/sendpasswordlink", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
