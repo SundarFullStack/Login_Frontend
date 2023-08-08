@@ -65,7 +65,7 @@ const Login = () => {
 
       if (res.status === 201) {
         localStorage.setItem("usersdatatoken", res.result.token);
-        history("https://login-backend-6xsa.onrender.com/dash");
+        history("/dash");
         setInpval({ ...inpval, email: "", password: "" });
       } else {
         toast.error("Invalid Credentials", {
@@ -120,10 +120,10 @@ const Login = () => {
               Login
             </button>
             <p>
-              Don't have an Account? <NavLink to="https://login-backend-6xsa.onrender.com/register">Sign Up</NavLink>{" "}
+              Don't have an Account? <NavLink to="/register">Sign Up</NavLink>{" "}
             </p>
             <p style={{ color: "black", fontWeight: "bold" }}>
-              Forgot Password <NavLink to="https://login-backend-6xsa.onrender.com/password-reset">Click Here</NavLink>{" "}
+              Forgot Password <NavLink to="/password-reset">Click Here</NavLink>{" "}
             </p>
           </form>
           <ToastContainer />
