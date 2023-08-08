@@ -32,7 +32,7 @@ const ForgotPassword = () => {
         position: "top-center",
       });
     } else {
-      const res = await fetch(`https://login-backend-6xsa.onrender.com/${id}/${token}`, {
+      const res = await fetch(`/${id}/${token}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
