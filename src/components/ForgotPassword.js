@@ -14,22 +14,7 @@ const ForgotPassword = () => {
 
   const [message, setMessage] = useState("");
 
-  // const userValid = async () => {
-  //   const res = await fetch(`/forgotpassword/${id}/${token}`, {
-  //     method: "GET",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //   });
 
-  //   const data = await res.json();
-
-  //   if (data.status == 201) {
-  //     console.log("user valid");
-  //   } else {
-  //     history("*");
-  //   }
-  // };
 
   const setval = (e) => {
     setPassword(e.target.value);
@@ -47,7 +32,7 @@ const ForgotPassword = () => {
         position: "top-center",
       });
     } else {
-      const res = await fetch(`/${id}/${token}`, {
+      const res = await fetch(`https://login-backend-6xsa.onrender.com/${id}/${token}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -68,16 +53,11 @@ const ForgotPassword = () => {
     }
   };
 
-  // useEffect(() => {
-  //   userValid();
-  //   setTimeout(() => {
-  //     setData(true);
-  //   }, 3000);
-  // }, []);
+
 
   return (
     <>
-      {/* {data2 ? ( */}
+    
         <>
           <section>
             <div className="form_data">
@@ -116,9 +96,9 @@ const ForgotPassword = () => {
             </div>
           </section>
         </>
-      {/* ) : (
-        <h3>Loading...</h3>
-      )} */}
+
+
+
     </>
   );
 };
