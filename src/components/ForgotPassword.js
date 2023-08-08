@@ -15,7 +15,13 @@ const ForgotPassword = () => {
   const [message, setMessage] = useState("");
 
 
-
+ const userValid = async () => {
+    const res = await fetch(`https://bespoke-custard-7d7688.netlify.app/forgotpassword/${id}/${token}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
   const setval = (e) => {
     setPassword(e.target.value);
   };
@@ -52,7 +58,9 @@ const ForgotPassword = () => {
       }
     }
   };
-
+  useEffect(() => {
+    userValid();
+  }, []);
 
 
   return (
