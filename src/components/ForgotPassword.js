@@ -16,7 +16,7 @@ const ForgotPassword = () => {
 
 
  const userValid = async () => {
-    const res = await fetch(`https://bespoke-custard-7d7688.netlify.app/forgotpassword/${id}/${token}`, {
+    const res = await fetch(`https://login-backend-6xsa.onrender.com/forgotpassword/${id}/${token}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
